@@ -1,31 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiArma | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/funcionalidades.js"></script>
 </head>
 
 <body class="hero-section fondo2">
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MiArma</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <button id="btnFondo">Cambiar Fondo</button>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 text-center">
+                <button id="btnFondo" class="btn btn-primary btn-lg mb-4">Cambiar Fondo</button>
+
+                <!-- Carrusel de miniaturas -->
+                <div class="carousel-thumbnails">
+                    <div class="thumbnail-item">
+                        <img src="assets/img/paisaje2-mini.png" alt="Paisaje 2" class="img-thumbnail-custom">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/paisaje3-mini.jpg" alt="Paisaje 3" class="img-thumbnail-custom">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="assets/img/paisaje4-mini.jpg" alt="Paisaje 4" class="img-thumbnail-custom">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        <a href="pages/credits.html" target="_blank"
+                            title="Ver las atribuciones de todo el contenido multimedia">
+                            Créditos y Licencias del Contenido
+                        </a>
+                    </p>
 
+                    <div class="licencia-propia">
+                        <img src="RUTA_A_TU_ICONO_CC.svg"
+                            alt="Licencia Creative Commons Atribución-NoComercial-CompartirIgual">
+
+                        <span id="licencia-texto">
+                            Landing Page © MiArma - Licenciada bajo
+                            <a href="URL_A_LA_LICENCIA_ELEGIDA" target="_blank">CC BY-NC-SA 4.0</a>
+                        </span>
+                    </div>
+
+                    <p class="copyright-info mb-0">
+                        Proyecto Integrado de Artista Digital Ficticia | Desarrollado por Rubén Ojeda y Rafael Verdugo
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>

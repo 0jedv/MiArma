@@ -1,11 +1,16 @@
 body {
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .fondo2 {
     background-image: url("../assets/img/paisaje2.png");
-
 }
 
 .fondo3 {
@@ -14,4 +19,188 @@ body {
 
 .fondo4 {
     background-image: url("../assets/img/paisaje4.jpg");
+}
+
+/* Header & Navbar */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333 !important;
+}
+
+.nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnFondo {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#btnFondo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel de Miniaturas - HORIZONTAL SIN SCROLL */
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.thumbnail-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.thumbnail-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.img-thumbnail-custom {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-item:hover .img-thumbnail-custom {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 1.6;
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: auto;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #000;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.licencia-propia {
+    display: block;
+    margin: 10px 0;
+}
+
+.licencia-propia img {
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.copyright-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    #btnFondo {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .img-thumbnail-custom {
+        width: 240px;
+        height: 150px;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 15px 10px;
+    }
+
+    .copyright-info {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    #btnFondo {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-thumbnails {
+        gap: 10px;
+    }
+
+    .img-thumbnail-custom {
+        width: 180px;
+        height: 112px;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
 }
