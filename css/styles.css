@@ -1,0 +1,17 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fondo2 {
+    background-image: url("../assets/img/paisaje2.png");
+
+}
+
+.fondo3 {
+    background-image: url("../assets/img/paisaje3.jpg");
+}
+
+.fondo4 {
+    background-image: url("../assets/img/paisaje4.jpg");
+}
