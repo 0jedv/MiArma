@@ -1,12 +1,20 @@
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    position: relative;
 }
 
 .fondo1 {
@@ -27,8 +35,15 @@ body {
 
 /* Header & Navbar */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(218, 218, 218, 0.9);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .navbar {
@@ -38,22 +53,35 @@ header {
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #333 !important;
+    color: #1a1a1a;
 }
 
 .nav-link {
-    color: #555 !important;
+    color: #1a1a1a;
     font-weight: 500;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #000 !important;
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+.nav-color-green .nav-link:hover {
+    /* Aquí usamos el color de .nav-link1:hover */
+    color: #009307;
+    transform: scale(1.2);
+}
+
+.nav-color-red .nav-link:hover {
+    /* Color de .nav-link:hover */
+    color: #ff0000;
+    transform: scale(1.2);
 }
 
 /* Main Content */
-main {
+.hero-section main {
     flex: 1;
     display: flex;
     align-items: center;
@@ -67,13 +95,13 @@ main {
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.5);
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
 
 #btnFondo:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Carousel de Miniaturas - HORIZONTAL SIN SCROLL */
@@ -119,7 +147,7 @@ footer {
     width: 100%;
     padding: 20px 20px;
     box-sizing: border-box;
-    color: #333;
+    color: #1a1a1a;
     font-size: 0.85em;
     text-align: center;
     line-height: 1.6;
@@ -209,4 +237,17 @@ footer a:focus {
     footer {
         font-size: 0.7em;
     }
+}
+
+/* Futuristic Font */
+@font-face {
+    font-family: 'ScienceGothic';
+    src: url('../assets/fonts/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.letra-futurista {
+    font-family: 'ScienceGothic', sans-serif;
 }

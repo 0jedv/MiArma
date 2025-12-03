@@ -12,49 +12,116 @@
     <script defer src="js/funcionalidades.js"></script>
 </head>
 
-<body class="hero-section fondo1">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">MiArma</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
+
+<body>
+    <!-- Hero Section con Fondo -->
+    <section class="hero-section fondo1">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a href="index.html">
+                        <img src="assets/img/favicon.svg" alt="logo" class="logo">
+
+                        <a class="navbar-brand letra-futurista" href="#">MiArma</a>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item letra-futurista"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item letra-futurista"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item letra-futurista"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 text-center">
+                    <button id="btnFondo" class="btn mb-4 letra-futurista">Fondo Principal</button>
+
+                    <!-- Carrusel de miniaturas -->
+                    <div class="carousel-thumbnails">
+                        <div class="thumbnail-item">
+                            <img id="fondo2" src="assets/img/paisaje2-mini.png" alt="Paisaje 2"
+                                class="img-thumbnail-custom ">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img id="fondo3" src="assets/img/paisaje3-mini.jpg" alt="Paisaje 3"
+                                class="img-thumbnail-custom">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img id="fondo4" src="assets/img/paisaje4-mini.jpg" alt="Paisaje 4"
+                                class="img-thumbnail-custom">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </main>
 
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 text-center">
-                <button id="btnFondo" class="btn mb-4">Fondo Principal</button>
 
-                <!-- Carrusel de miniaturas -->
-                <div class="carousel-thumbnails">
-                    <div class="thumbnail-item">
-                        <img id="fondo2" src="assets/img/paisaje2-mini.png" alt="Paisaje 2"
-                            class="img-thumbnail-custom ">
+    </section>
+
+    <!-- Sección de Información Adicional con Fondo Negro -->
+    <section class="info-section">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Sobre Mi Trabajo</h2>
+                    <p class="section-subtitle">Explora mi portafolio y proyectos destacados</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">🎨</div>
+                        <h3>Diseño Creativo</h3>
+                        <p>Creación de diseños únicos y personalizados que capturan la esencia de cada proyecto.</p>
                     </div>
-                    <div class="thumbnail-item">
-                        <img id="fondo3" src="assets/img/paisaje3-mini.jpg" alt="Paisaje 3"
-                            class="img-thumbnail-custom">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">💡</div>
+                        <h3>Ideas Innovadoras</h3>
+                        <p>Soluciones creativas y modernas adaptadas a las necesidades del cliente.</p>
                     </div>
-                    <div class="thumbnail-item">
-                        <img id="fondo4" src="assets/img/paisaje4-mini.jpg" alt="Paisaje 4"
-                            class="img-thumbnail-custom">
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h3>Resultados Rápidos</h3>
+                        <p>Entrega eficiente sin comprometer la calidad del trabajo final.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Proyectos Completados</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">30+</h3>
+                            <p class="stat-label">Clientes Satisfechos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Años de Experiencia</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
         <div class="container">
@@ -62,7 +129,7 @@
                 <div class="col-12">
                     <p>
                         <a href="pages/credits.html" target="_blank"
-                            title="Ver las atribuciones de todo el contenido multimedia">
+                            title="Ver las atribuciones de todo  el contenido multimedia">
                             Créditos y Licencias del Contenido
                         </a>
                     </p>
@@ -78,13 +145,13 @@
                     </div>
 
                     <p class="copyright-info mb-0">
-                        Proyecto Integrado de Artista Digital Ficticia | Desarrollado por Rubén Ojeda y Rafael Verdugo
+                        Proyecto Integrado de Artista Digital Ficticia | Desarrollado por Rubén Ojeda y Rafael
+                        Verdugo
                     </p>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
