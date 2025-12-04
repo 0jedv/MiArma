@@ -251,3 +251,31 @@ footer a:focus {
 .letra-futurista {
     font-family: 'ScienceGothic', sans-serif;
 }
+
+.info-section {
+    color: white;
+    /* 1. Ruta a tu archivo GIF. Asegúrate de que la ruta es correcta. */
+    background-image: url('../assets/videos/gif-calle.gif');
+
+    /* 2. Propiedades para que el GIF se vea bien: */
+
+    /* Evita que el fondo se repita (se muestre una sola vez) */
+    background-repeat: no-repeat;
+
+    /* Centra la imagen en el cuerpo de la página */
+    background-position: center center;
+
+    /* Asegura que el GIF cubra toda el área del fondo */
+    background-size: cover;
+
+    /* Fija el GIF en su lugar (opcional, para que no se mueva al hacer scroll) */
+    background-attachment: fixed;
+
+    /* OPCIONAL: Un color de fondo sólido por si el GIF no carga */
+    background-color: #000000;
+
+    /* Para que el cuerpo ocupe al menos toda la altura de la ventana */
+    min-height: 100vh;
+    margin: 0;
+    /* Elimina el margen predeterminado del navegador */
+}
