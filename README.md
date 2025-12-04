@@ -205,7 +205,7 @@ MiArma/
 1. Clonar o descargar el repositorio
 2. Colocar la carpeta `MiArma` en el directorio de tu servidor local (ej: `htdocs` en XAMPP)
 3. Iniciar el servidor Apache
-4. Acceder a `http://localhost/MiArma/MiArma/index.html`
+4. Acceder a `http://localhost/MiArma/index.html`
 
 ---
 
