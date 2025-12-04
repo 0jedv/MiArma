@@ -84,7 +84,7 @@ Proyecto Integrado de Artista Digital Ficticia desarrollado por Rubén Ojeda y R
 
 ---
 
-## Licencia de Tu Obra (Landing Page)
+## Licencia de la Obra (Landing Page)
 
 ### Licencia Elegida: Creative Commons Atribución-No Comercial 4.0 Internacional (CC BY-NC 4.0)
 
