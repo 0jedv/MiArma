@@ -252,10 +252,14 @@ footer a:focus {
     font-family: 'ScienceGothic', sans-serif;
 }
 
+.fondo-section {
+    background-image: url('../assets/img/fondosingift1.png');
+}
+
 .info-section {
     color: white;
     /* 1. Ruta a tu archivo GIF. Asegúrate de que la ruta es correcta. */
-    background-image: url('../assets/videos/gif-calle.gif');
+
 
     /* 2. Propiedades para que el GIF se vea bien: */
 
@@ -278,4 +282,47 @@ footer a:focus {
     min-height: 100vh;
     margin: 0;
     /* Elimina el margen predeterminado del navegador */
+}
+
+
+
+.info-card {
+    padding: 30px;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+.fondogif1 {
+    background-image: url('../assets/videos/gif-fire.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondogif2 {
+    background-image: url('../assets/videos/gif-calle.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondogif3 {
+    background-image: url('../assets/videos/gif-calle.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondosingift1 {
+    background-image: url('../assets/img/fondosingift1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondosingift2 {
+    background-image: url('../assets/img/fondosingift2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

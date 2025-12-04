@@ -52,3 +52,33 @@ function cambiarColorNavbar() {
         navbar.classList.add('nav-color-green');
     }
 }
+
+// Obtener todas las tarjetas
+const cards = document.getElementsByClassName('info-card');
+
+// Iterar sobre cada tarjeta y agregar el evento mouseenter
+Array.from(cards).forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        // Obtener las clases de la tarjeta actual
+        const clasesCard = card.classList;
+        const arrayClasesCard = Array.from(clasesCard);
+        const cartaSelectedActual = arrayClasesCard.find(clase => clase.startsWith('fondogif'));
+
+        if (cartaSelectedActual === 'fondogif1') {
+            cambiarFondoInfoSection('fondosingift1');
+        } else if (cartaSelectedActual === 'fondogif2') {
+            cambiarFondoInfoSection('fondosingift2');
+        }
+    });
+});
+
+
+function cambiarFondoInfoSection(nuevoFondo) {
+    const infoSection = document.querySelector('.info-section');
+    const fondoActual = infoSection.classList;
+    const fondoActualArray = Array.from(fondoActual);
+    const fondoActualActual = fondoActualArray.find(clase => clase.startsWith('fondo-section'));
+    infoSection.classList.remove(fondoActualActual, 'fondosingift1', 'fondosingift2');
+    // Agregar la nueva clase de fondo
+    infoSection.classList.add(nuevoFondo);
+}
