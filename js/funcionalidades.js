@@ -82,3 +82,78 @@ function cambiarFondoInfoSection(nuevoFondo) {
     // Agregar la nueva clase de fondo
     infoSection.classList.add(nuevoFondo);
 }
+
+// ============================================
+// FUNCIONALIDAD DEL MODAL DE VIDEO
+// ============================================
+
+/**
+ * Abre el modal del video y reproduce el video
+ */
+function abrirModalVideo() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    
+    if (modal && video) {
+        modal.classList.add('show');
+        video.currentTime = 0; // Reinicia el video al inicio
+        video.play().catch(error => {
+            console.log('Autoplay no permitido, el usuario debe iniciar el video manualmente.');
+        });
+        
+        // Prevenir scroll del body cuando el modal está abierto
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * Cierra el modal del video y pausa el video
+ */
+function cerrarModalVideo() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    
+    if (modal && video) {
+        modal.classList.remove('show');
+        video.pause();
+        video.currentTime = 0; // Reinicia el video
+        
+        // Restaurar scroll del body
+        document.body.style.overflow = '';
+    }
+}
+
+// Event Listeners para el modal del video
+const btnVerReel = document.getElementById('btnVerReel');
+const closeModal = document.getElementById('closeModal');
+const videoModal = document.getElementById('videoModal');
+
+// Abrir modal al hacer clic en el botón "Ver Reel"
+if (btnVerReel) {
+    btnVerReel.addEventListener('click', abrirModalVideo);
+}
+
+// Cerrar modal al hacer clic en el botón de cerrar (X)
+if (closeModal) {
+    closeModal.addEventListener('click', cerrarModalVideo);
+}
+
+// Cerrar modal al hacer clic fuera del contenido del modal
+if (videoModal) {
+    videoModal.addEventListener('click', (event) => {
+        // Solo cerrar si el clic fue en el fondo del modal, no en el contenido
+        if (event.target === videoModal) {
+            cerrarModalVideo();
+        }
+    });
+}
+
+// Cerrar modal al presionar la tecla Escape
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('videoModal');
+        if (modal && modal.classList.contains('show')) {
+            cerrarModalVideo();
+        }
+    }
+});

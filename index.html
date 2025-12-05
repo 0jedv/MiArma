@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Credits CSS (para estilos de tarjetas) -->
+    <link rel="stylesheet" href="css/credits.css">
     <script defer src="js/funcionalidades.js"></script>
 </head>
 
@@ -94,15 +96,56 @@
                 </div>
             </div>
 
+            <!-- Sección Multimedia: Video y Audio -->
+            <div class="row text-center mt-5">
+                <div class="col-12">
+                    <h2 class="section-title">Experiencia Multimedia</h2>
+                    <p class="section-subtitle">Sumérgete en el universo de MiArma</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-3">
+                <!-- Botón Ver Reel -->
+                <div class="col-md-6">
+                    <div class="credit-item">
+                        <strong>Video Reel</strong>
+                        <p>Descubre un viaje visual a través de paisajes futuristas</p>
+                        <button id="btnVerReel" class="btn-reel letra-futurista">Ver Reel</button>
+                    </div>
+                </div>
+
+                <!-- Reproductor de Audio -->
+                <div class="col-md-6">
+                    <div class="credit-item">
+                        <strong>Audio Ambiental</strong>
+                        <p>Música de ambiente espacial para acompañar tu exploración</p>
+                        <audio controls class="audio-player">
+                            <source src="assets/videos/audio.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+        <!-- Modal para el Video -->
+        <div id="videoModal" class="video-modal">
+            <div class="video-modal-content">
+                <span id="closeModal" class="close-modal">&times;</span>
+                <video id="videoPlayer" controls>
+                    <source src="assets/videos/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <p>
-                            <a href="pages/credits.html" target="_blank"
-                                title="Ver las atribuciones de todo el contenido multimedia">
+                            <a href="pages/credits.html" title="Ver las atribuciones de todo el contenido multimedia">
                                 Créditos y Licencias del Contenido
                             </a>
                         </p>
@@ -131,7 +174,8 @@
         </footer>
     </section>
 
-
+    <!-- Bootstrap JS Bundle (incluye Popper) - Necesario para el menú hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
