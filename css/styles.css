@@ -540,11 +540,12 @@ footer a:focus {
    ============================================ */
 
 .info-section .credit-item {
-    text-align: center;
+    text-align: left;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+<<<<<<< HEAD
     align-items: center;
     background: rgba(255, 255, 255, 0.5);
     color: black;
@@ -554,6 +555,12 @@ footer a:focus {
     transform: scale(1.05);
     background-color: #000;
 }
+=======
+    align-items: flex-start;
+}
+
+
+>>>>>>> 8e14e2c7040cf3d98eef6140a683728a115e6b83
 
 .info-section .credit-item strong {
     font-size: 1.4rem;
